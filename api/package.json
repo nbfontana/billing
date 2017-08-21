@@ -1,5 +1,5 @@
 {
-  "name": "billing-api",
+  "name": "billing-cycle-api",
   "version": "1.0.0",
   "description": "",
   "main": "src/loader.js",
