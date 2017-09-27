@@ -1,9 +1,11 @@
 import axios from 'axios';
 import {toastr} from 'react-redux-toastr';
-import {reset as resetForm} from 'redux-form';
+import {reset as resetForm, initialize} from 'redux-form';
 import {showTabs, selectTab} from "../common/tab/tab.actions";
 
 const BASE_URL = 'http://localhost:3003/api';
+
+const INITIAL_VALUES = {};
 
 export function getList() {
     const request = axios.get(`${BASE_URL}/billing-cycles`);
@@ -15,12 +17,9 @@ export function getList() {
 
 export function create(values) {
     return dispatch => {
-        axios.post(`${BASE_URL}/billing-cycles`, values).then(response => {
+        axios.post(`${BASE_URL}/billing-cycles`, values).then(() => {
             toastr.success('Success', 'Deu certo!');
-            dispatch([
-                resetForm('billingCycleForm'), getList(),
-                selectTab('tabList'), showTabs('tabList', 'tabCreate')
-            ]);
+            dispatch(init());
         }).catch(e => {
             e.response.data.errors.forEach(erro => toastr.error('Erro', erro));
         });
@@ -30,6 +29,16 @@ export function create(values) {
 export function showUpdate(billingClycle) {
     return [
         showTabs('tabUpdate'),
-        selectTab('tabUpdate')
+        selectTab('tabUpdate'),
+        initialize('billingCycleForm', billingClycle)
+    ]
+}
+
+export function init() {
+    return [
+        showTabs('tabList', 'tabCreate'),
+        selectTab('tabList'),
+        getList(),
+        initialize('billingCycleForm', INITIAL_VALUES),
     ]
 }
