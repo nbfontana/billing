@@ -5,7 +5,7 @@ import {reduxForm, Field, formValueSelector} from 'redux-form';
 import {init} from './billing-cycle.actions';
 
 import LabelAndInput from '../common/form/label-and-input';
-import CreditList from './creditList';
+import CreditList from './itemList';
 
 class BillingCycleForm extends Component {
     render() {
@@ -20,7 +20,7 @@ class BillingCycleForm extends Component {
                            placeholder="Informe o mês" readOnly={readOnly}/>
                     <Field name="year" component={LabelAndInput} label="Ano" type="number" cols="12 4"
                            placeholder="Informe o ano" readOnly={readOnly}/>
-                    <CreditList list={credits} cols='12 6' readOnly={readOnly}/>
+                    <CreditList legend='Créditos' field='credits' list={credits} cols='12 6' readOnly={readOnly}/>
                 </div>
                 <div className="box-footer">
                     <div className="col-md-2">
