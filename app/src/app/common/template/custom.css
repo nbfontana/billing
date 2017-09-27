@@ -3,3 +3,11 @@
     bottom: 0;
     width: 100%;
 }
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.table-actions {
+    width: 150px;
+}

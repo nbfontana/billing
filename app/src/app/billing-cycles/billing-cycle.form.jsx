@@ -20,10 +20,16 @@ class BillingCycleForm extends Component {
                            placeholder="Informe o ano" readOnly={readOnly}/>
                 </div>
                 <div className="box-footer">
-                    <button className='btn btn-primary'>Submit</button>
-                    <button type="button" className='btn btn-default' onClick={this.props.init}>
-                        Cancelar
-                    </button>
+                    <div className="col-md-2">
+                        <button className={`form-control  btn btn-${this.props.submitClass}`}>
+                            {this.props.submitLabel}
+                        </button>
+                    </div>
+                    <div className="col-md-2">
+                        <button type="button" className='form-control btn btn-default' onClick={this.props.init}>
+                            Cancelar
+                        </button>
+                    </div>
                 </div>
             </form>
         )
