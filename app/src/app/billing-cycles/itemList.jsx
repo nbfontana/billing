@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import Grid from '../common/layout/grid';
-import Input from '../common/form/input';
-
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {Field, arrayInsert, arrayRemove} from 'redux-form';
+
+import Grid from '../common/layout/grid';
+import Input from '../common/form/input';
+import If from '../common/operators/if';
 
 class ItemList extends Component {
 
@@ -33,6 +34,12 @@ class ItemList extends Component {
                     <Field name={`${this.props.field}[${index}].value`} component={Input}
                            placeholder="Informe o nome" readOnly={this.props.readOnly}/>
                 </td>
+                <If test={this.props.showStatus}>
+                    <td>
+                        <Field name={`${this.props.field}[${index}].status`} component={Input}
+                               placeholder="Informe o status" readOnly={this.props.readOnly}/>
+                    </td>
+                </If>
                 <td>
                     <button type='button' className='ml5 btn btn-success' onClick={() => this.add(index + 1)}>
                         <i className="fa fa-plus"/>
@@ -58,6 +65,9 @@ class ItemList extends Component {
                         <tr>
                             <th>Nome</th>
                             <th>Valor</th>
+                            <If test={this.props.showStatus}>
+                                <th>Status</th>
+                            </If>
                             <th className='table-actions'>Ações</th>
                         </tr>
                         </thead>
