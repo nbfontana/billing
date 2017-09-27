@@ -26,3 +26,10 @@ export function create(values) {
         });
     };
 }
+
+export function showUpdate(billingClycle) {
+    return [
+        showTabs('tabUpdate'),
+        selectTab('tabUpdate')
+    ]
+}
