@@ -7,14 +7,14 @@ import promise from 'redux-promise';
 import multi from 'redux-multi';
 import thunk from 'redux-thunk';
 
-import App from './app/app';
+import AppOrAuth from './app/auth-or-app';
 import Reducers from './app/reducers';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 const store = applyMiddleware(thunk, multi, promise)(createStore)(Reducers, devTools);
 ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <AppOrAuth/>
     </Provider>,
     document.getElementById('app')
 );
