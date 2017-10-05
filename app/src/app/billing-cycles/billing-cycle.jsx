@@ -9,7 +9,7 @@ import Content from '../common/template/content';
 import Tabs from '../common/tab/tabs';
 import TabsHeader from '../common/tab/tabs-header';
 import TabHeader from '../common/tab/tab-header';
-import TabsContent from '../common/tab/tabs-content';
+import TabsContent from 'app/common/tab/tabs-content';
 import TabContent from '../common/tab/tab-content';
 import BillingCycleList from "./billing-cycle.list";
 import BillingCycleForm from "./billing-cycle.form";
