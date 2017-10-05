@@ -4,10 +4,10 @@ Billing app built with React w/ Redux
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 
-[![devDependency Status](https://david-dm.org/nbfontana/billing/dev-status.svg)](https://david-dm.org/nbfontana/billing?type=dev)
 [![GitHub issues](https://img.shields.io/github/issues/nbfontana/billing.svg)](https://github.com/nbfontana/billing/issues)
 [![GitHub stars](https://img.shields.io/github/stars/nbfontana/billing.svg)](https://github.com/nbfontana/billing/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nbfontana/billing/master/LICENSE)
+[![devDependency Status](https://david-dm.org/nbfontana/billing/dev-status.svg)](https://david-dm.org/nbfontana/billing?type=dev)
 
 ## Installation (API)
 
