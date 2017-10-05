@@ -1,8 +1,9 @@
 import {toastr} from 'react-redux-toastr';
 import axios from 'axios';
-import constants from '../constants';
+import constants from '../../constants';
 
 export function login(values) {
+    console.log(values);
     return submit(values, `${constants.AUTH_URL}/login`);
 }
 

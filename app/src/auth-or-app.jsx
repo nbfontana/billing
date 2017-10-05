@@ -3,8 +3,8 @@ import axios from 'axios'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import App from './app'
-import Auth from './auth/auth';
-import {validateToken} from './auth/auth.actions';
+import Auth from 'containers/auth/auth';
+import {validateToken} from 'containers/auth/auth.actions';
 
 class AuthOrApp extends Component {
     componentWillMount() {

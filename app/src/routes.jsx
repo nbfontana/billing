@@ -1,8 +1,8 @@
 import React from 'react';
 import {HashRouter, Route, Redirect, Switch} from 'react-router-dom';
 
-import Dashboard from './dashboard/dashboard';
-import BillingCycles from './billing-cycles/billing-cycle';
+import Dashboard from 'containers/dashboard/dashboard';
+import BillingCycles from 'containers/billing-cycles/billing-cycle';
 
 export default props => (
     <HashRouter>

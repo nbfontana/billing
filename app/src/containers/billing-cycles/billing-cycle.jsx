@@ -4,13 +4,13 @@ import {bindActionCreators} from 'redux';
 
 import {create, update, remove, init} from "./billing-cycle.actions";
 
-import ContentHeader from '../common/template/content-header';
-import Content from '../common/template/content';
-import Tabs from '../common/tab/tabs';
-import TabsHeader from '../common/tab/tabs-header';
-import TabHeader from '../common/tab/tab-header';
-import TabsContent from 'app/common/tab/tabs-content';
-import TabContent from '../common/tab/tab-content';
+import ContentHeader from 'components/template/content-header';
+import Content from 'components/template/content';
+import Tabs from 'components/tab/tabs';
+import TabsHeader from 'components/tab/tabs-header';
+import TabHeader from 'components/tab/tab-header';
+import TabsContent from 'components/tab/tabs-content';
+import TabContent from 'components/tab/tab-content';
 import BillingCycleList from "./billing-cycle.list";
 import BillingCycleForm from "./billing-cycle.form";
 

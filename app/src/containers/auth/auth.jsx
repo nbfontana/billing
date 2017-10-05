@@ -4,10 +4,10 @@ import {reduxForm, Field} from 'redux-form'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {login, signup} from './auth.actions'
-import Row from '../common/layout/row'
-import Grid from '../common/layout/grid'
-import Messages from '../common/msg/messages'
-import Input from '../common/form/input-auth'
+import Row from 'components/layout/row'
+import Grid from 'components/layout/grid'
+import Messages from 'components/msg/messages'
+import Input from 'components/form/input-auth'
 
 class Auth extends Component {
     constructor(props) {

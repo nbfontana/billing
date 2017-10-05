@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import {reduxForm, Field, formValueSelector} from 'redux-form';
 import {init} from './billing-cycle.actions';
 
-import LabelAndInput from '../common/form/label-and-input';
+import LabelAndInput from 'components/form/label-and-input';
 import ItemList from './itemList';
 import Summary from './summary';
 

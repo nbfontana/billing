@@ -3,10 +3,10 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {getSummary} from './dashboard.actions';
-import ContentHeader from '../common/template/content-header';
-import Content from '../common/template/content';
-import ValueBox from '../common/widget/value-box';
-import Row from '../common/layout/row';
+import ContentHeader from 'components/template/content-header';
+import Content from 'components/template/content';
+import ValueBox from 'components/widget/value-box';
+import Row from 'components/layout/row';
 
 class DashboardRedux extends Component {
 

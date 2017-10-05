@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Grid from "../common/layout/grid";
-import Row from '../common/layout/row';
-import ValueBox from '../common/widget/value-box';
+import Grid from "components/layout/grid";
+import Row from 'components/layout/row';
+import ValueBox from 'components/widget/value-box';
 
 export default ({credit, debt}) => (
     <Grid cols='12'>

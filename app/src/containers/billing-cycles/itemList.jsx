@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {Field, arrayInsert, arrayRemove} from 'redux-form';
 
-import Grid from '../common/layout/grid';
-import Input from '../common/form/input';
-import If from '../common/operators/if';
+import Grid from 'components/layout/grid';
+import Input from 'components/form/input';
+import If from 'components/operators/if';
 
 class ItemList extends Component {
 
