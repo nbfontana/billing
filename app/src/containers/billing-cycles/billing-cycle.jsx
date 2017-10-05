@@ -16,44 +16,44 @@ import BillingCycleForm from "./billing-cycle.form";
 
 class BillingCycle extends Component {
 
-    componentWillMount() {
-        this.props.init();
-    }
+  componentWillMount() {
+    this.props.init();
+  }
 
-    render() {
-        return (
-            <div>
-                <ContentHeader title="Ciclos de Pagamentos" small="Cadastro"/>
-                <Content>
-                    <Tabs>
-                        <TabsHeader>
-                            <TabHeader label="Listar" icon="bars" target="tabList"/>
-                            <TabHeader label="Incluir" icon="plus" target="tabCreate"/>
-                            <TabHeader label="Alterar" icon="pencil" target="tabUpdate"/>
-                            <TabHeader label="Excluir" icon="trash-o" target="tabDelete"/>
-                        </TabsHeader>
-                        <TabsContent>
-                            <TabContent id="tabList">
-                                <BillingCycleList/>
-                            </TabContent>
-                            <TabContent id="tabCreate">
-                                <BillingCycleForm onSubmit={this.props.create}
-                                                  submitClass='primary' submitLabel='Incluir'/>
-                            </TabContent>
-                            <TabContent id="tabUpdate">
-                                <BillingCycleForm onSubmit={this.props.update}
-                                                  submitClass='info' submitLabel='Alterar'/>
-                            </TabContent>
-                            <TabContent id="tabDelete">
-                                <BillingCycleForm onSubmit={this.props.remove} readOnly={true}
-                                                  submitClass='danger' submitLabel='Exluir'/>
-                            </TabContent>
-                        </TabsContent>
-                    </Tabs>
-                </Content>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <ContentHeader title="Ciclos de Pagamentos" small="Cadastro"/>
+        <Content>
+          <Tabs>
+            <TabsHeader>
+              <TabHeader label="Listar" icon="bars" target="tabList"/>
+              <TabHeader label="Incluir" icon="plus" target="tabCreate"/>
+              <TabHeader label="Alterar" icon="pencil" target="tabUpdate"/>
+              <TabHeader label="Excluir" icon="trash-o" target="tabDelete"/>
+            </TabsHeader>
+            <TabsContent>
+              <TabContent id="tabList">
+                <BillingCycleList/>
+              </TabContent>
+              <TabContent id="tabCreate">
+                <BillingCycleForm onSubmit={this.props.create}
+                                  submitClass='primary' submitLabel='Incluir'/>
+              </TabContent>
+              <TabContent id="tabUpdate">
+                <BillingCycleForm onSubmit={this.props.update}
+                                  submitClass='info' submitLabel='Alterar'/>
+              </TabContent>
+              <TabContent id="tabDelete">
+                <BillingCycleForm onSubmit={this.props.remove} readOnly={true}
+                                  submitClass='danger' submitLabel='Exluir'/>
+              </TabContent>
+            </TabsContent>
+          </Tabs>
+        </Content>
+      </div>
+    )
+  }
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({init, create, update, remove}, dispatch);

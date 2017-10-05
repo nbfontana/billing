@@ -5,11 +5,11 @@ import Dashboard from 'containers/dashboard/dashboard';
 import BillingCycles from 'containers/billing-cycles/billing-cycle';
 
 export default props => (
-    <HashRouter>
-        <Switch>
-            <Route path='/dashboard' component={Dashboard}/>
-            <Route path='/billing-cycles' component={BillingCycles}/>
-            <Redirect from='*' to="/dashboard"/>
-        </Switch>
-    </HashRouter>
+  <HashRouter>
+    <Switch>
+      <Route path='/dashboard' component={Dashboard}/>
+      <Route path='/billing-cycles' component={BillingCycles}/>
+      <Redirect from='*' to="/dashboard"/>
+    </Switch>
+  </HashRouter>
 )

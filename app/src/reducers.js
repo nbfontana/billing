@@ -8,12 +8,12 @@ import BillingCyclesReducer from 'containers/billing-cycles/billing-cycle.reduce
 import AuthReducer from 'containers/auth/auth.reducer';
 
 const rootReducer = combineReducers({
-    dashboard: DashboardReducer,
-    tab: TabReducer,
-    billingCycle: BillingCyclesReducer,
-    form: formReducer,
-    toastr: toastrReducer,
-    auth: AuthReducer
+  dashboard: DashboardReducer,
+  tab: TabReducer,
+  billingCycle: BillingCyclesReducer,
+  form: formReducer,
+  toastr: toastrReducer,
+  auth: AuthReducer
 });
 
 export default rootReducer;

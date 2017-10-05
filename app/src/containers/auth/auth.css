@@ -1,15 +1,15 @@
 .wrapper {
-    background-color: #fff !important;
+  background-color: #fff !important;
 }
 
 .login-box-body {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 .login-box button {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .login-box a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }

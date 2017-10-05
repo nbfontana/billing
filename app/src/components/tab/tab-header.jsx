@@ -6,22 +6,22 @@ import If from 'components/operators/if';
 import {selectTab} from './tab.actions';
 
 class TabHeader extends Component {
-    render() {
-        const selected = this.props.tab.selected === this.props.target;
-        const visible = this.props.tab.visible[this.props.target];
-        return (
-            <If test={visible}>
-                <li className={selected ? 'active' : ''}>
-                    <a href="javascript:;"
-                       data-toggle="tab"
-                       onClick={() => this.props.selectTab(this.props.target)}
-                       data-target={this.props.target}>
-                        <i className={`fa fa-${this.props.icon}`}/> {this.props.label}
-                    </a>
-                </li>
-            </If>
-        )
-    }
+  render() {
+    const selected = this.props.tab.selected === this.props.target;
+    const visible = this.props.tab.visible[this.props.target];
+    return (
+      <If test={visible}>
+        <li className={selected ? 'active' : ''}>
+          <a href="javascript:;"
+             data-toggle="tab"
+             onClick={() => this.props.selectTab(this.props.target)}
+             data-target={this.props.target}>
+            <i className={`fa fa-${this.props.icon}`}/> {this.props.label}
+          </a>
+        </li>
+      </If>
+    )
+  }
 }
 
 const mapStateToProps = state => ({tab: state.tab});

@@ -8,13 +8,13 @@ import Routes from 'routes';
 import Messages from 'components/msg/messages';
 
 export default props => (
-    <div className="wrapper">
-        <Header/>
-        <Sidebar/>
-        <div className="content-wrapper">
-            <Routes/>
-        </div>
-        <Footer/>
-        <Messages/>
+  <div className="wrapper">
+    <Header/>
+    <Sidebar/>
+    <div className="content-wrapper">
+      <Routes/>
     </div>
+    <Footer/>
+    <Messages/>
+  </div>
 )
