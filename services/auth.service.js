@@ -1,8 +1,8 @@
 const _ = require('lodash');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const User = require('./user');
-const env = require('../../config/.env');
+const User = require('../models/user');
+const env = require('../config/.env');
 
 const emailRegex = /\S+@\S+\.\S+/;
 const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/;
@@ -55,8 +55,8 @@ const signup = (req, res, next) => {
     if (!password.match(passwordRegex)) {
         return res.status(400).send({
             errors: [
-                `Senha precisar ter: uma letra maiúscula, 
-                uma letra minúscula, um número, uma caractere 
+                `Senha precisar ter: uma letra maiúscula,
+                uma letra minúscula, um número, uma caractere
                 especial(@#$%) e tamanho entre 6-20.`
             ]
         })

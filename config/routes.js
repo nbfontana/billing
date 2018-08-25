@@ -11,7 +11,7 @@ module.exports = function (server) {
 
     protectedApi.use(auth);
 
-    const billingCycle = require('../api/billing-cycles/billing-cycles.service');
+    const billingCycle = require('../services/billing-cycle.service');
     billingCycle.register(protectedApi, '/billing-cycles');
 
     /**
@@ -20,7 +20,7 @@ module.exports = function (server) {
     const openApi = express.Router();
     server.use('/auth', openApi);
 
-    const AuthService = require('../api/user/authService');
+    const AuthService = require('../services/auth.service');
     openApi.post('/login', AuthService.login);
     openApi.post('/signup', AuthService.signup);
     openApi.post('/validate-token', AuthService.validateToken);
