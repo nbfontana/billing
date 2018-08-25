@@ -1,17 +1,15 @@
 {
-  "name": "billing-cycle-api",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/loader.js",
+  "name": "billing-api",
+  "main": "./loader.js",
+  "author": "Neri Bez Fontana",
+  "license": "MIT",
   "scripts": {
     "api": "npm run api:dev",
     "api:dev": "nodemon",
-    "api:prod": "pm2 start src/loader.js --name billing-api"
+    "api:prod": "pm2 start ./loader.js --name billing-api"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "nodemon": "^1.11.0",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
@@ -22,8 +20,5 @@
     "mongoose-paginate": "^5.0.3",
     "node-restful": "^0.2.6",
     "pm2": "^2.6.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
   }
 }
