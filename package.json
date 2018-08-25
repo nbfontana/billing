@@ -6,7 +6,7 @@
   "scripts": {
     "api": "npm run api:dev",
     "api:dev": "nodemon",
-    "api:prod": "pm2 start ./loader.js --name billing-api"
+    "api:prod": "pm2 start ./index.js --name billing-api"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
